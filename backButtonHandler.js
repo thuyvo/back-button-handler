@@ -20,6 +20,18 @@
 
 function handleBackAction (arguments) {
 
+  //IE hack
+  var isIE = (function() {
+     var div = document.createElement('div');
+     div.innerHTML = '<!--[if IE]><i></i><![endif]-->';
+     return (div.getElementsByTagName('i').length === 1);         
+  }());
+  
+  if(isIE){
+    window.history.forward();
+    return;
+  }
+
   var COOKIE_BASE = "ck_";
   var isBackPressed = false;
   

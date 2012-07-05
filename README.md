@@ -30,7 +30,11 @@ See <http://dorukdestan.com/backhandler>
 
 Compability
 -----------
-Works with all browsers where JavaScript and cookies are enabled. Yes even with IE6!
+* Works with good browsers (Chromium and Firefox)
+* Don't know about Opera and Safari
+* Works on IE8+ with a hack*
+
+\* Because IE handles history.length in a smart(!) way, first `history.forward()` is executed to cope with it. IE increments history when going back but don't increments it when going forward!
 
 Caveats
 -------
