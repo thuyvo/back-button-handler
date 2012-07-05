@@ -1,7 +1,7 @@
 Back Button Handler
 ===================
 
-Detects if browser's back button pressed by the user and sets a handler for this action.
+A JavascriptFunction to detect if browser's back button pressed by the user and set a handler for this action.
 
 Usage
 -----
@@ -43,7 +43,7 @@ Caveats
 API
 ---
 * When **backButtonHandler.js** is included in the page _**handleBackAction**_ function is available.
-  - It takes Object as an argument in the form of `{handler: function}`
+  - It takes Object as an argument in the form of `{handler: function(previousHref)}` Note that function is passed _previousHref_
   - It returns an returns an Object has only one function: _.isBackPressed()_ which returns boolean.
 
 License
